@@ -1,0 +1,98 @@
+// CENTER HORIZONTAL VERTICAL
+@mixin center-horizontal-vertical {
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERIES
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile375x667 {
+    // 375 x 667
+    @media only screen and (min-width: 23.4375em) and (min-height: 41.6875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile360x720 {
+    // 360 x 720
+    @media only screen and (min-width: 22.5em) and (min-height: 45em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == iPhoneX {
+    // 375 x 812
+    @media only screen and (min-width: 23.4375em) and (min-height: 50.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == pixel2 {
+    // 411 x 731
+    @media only screen and (min-width: 25.6875em) and (min-height: 45.6875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == pixel2XL {
+    // 411 x 823
+    @media only screen and (min-width: 25.6875em) and (min-height: 51.4375em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    //600px
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    // 768 x 1024
+    @media only screen and (min-width: 48em) and (min-height: 64em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    //900px
+    @media only screen and (min-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    //1200px
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    // 1366 x 768
+    @media only screen and (min-width: 85.375em) and (min-height: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mid-desktop {
+    //1500px
+    @media only screen and (min-width: 93.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    //1800px
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == high-res-laptop-desktop {
+    //1920 x 1080
+    @media only screen and (min-width: 120em) and (min-height: 67.5em) {
+      @content;
+    }
+  }
+}
