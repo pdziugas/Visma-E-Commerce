@@ -1,4 +1,5 @@
 @import "../abstracts/_mixins.scss";
+@import "../abstracts/_variables.scss";
 
 .menu-title {
   text-align: center;
@@ -26,7 +27,7 @@
   border-radius: 2px;
   position: relative;
   overflow: hidden;
-  background: #fafafa;
+  background: $color-card-background;
   cursor: pointer;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
   transition: ease-in-out 0.3s;
@@ -37,50 +38,48 @@
   bottom: 65px;
   width: 100%;
   text-align: center;
-  color: #2f3640;
+  color: $color-primary;
   opacity: 0.9;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: normal;
 }
 
-.btn {
-  &--add-to-cart {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    bottom: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 5px;
-    color: #2f3640;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 500;
-    transition: ease-in-out 0.3s;
-  }
+.btn--add-to-cart {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 5px;
+  color: $color-primary;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  transition: ease-in-out 0.3s;
+}
 
-  &--add-to-cart:after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    top: 7px;
-    right: 50px;
-    height: 2px;
-    opacity: 0.7;
-    border-bottom: 1px solid #2f3640;
-  }
+.btn--add-to-cart:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  top: 7px;
+  right: 50px;
+  height: 2px;
+  opacity: 0.7;
+  border-bottom: 1px solid $color-primary;
+}
 
-  &--add-to-cart:before {
-    content: "";
-    position: absolute;
-    width: 30px;
-    top: 7px;
-    left: 50px;
-    height: 2px;
-    opacity: 0.7;
-    border-bottom: 1px solid #2f3640;
-  }
+.btn--add-to-cart:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  top: 7px;
+  left: 50px;
+  height: 2px;
+  opacity: 0.7;
+  border-bottom: 1px solid $color-primary;
 }
 
 .card-price {
@@ -90,7 +89,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #4f4f4f;
+  color: $color-primary;
 }
 
 .card-container:hover {
@@ -127,7 +126,7 @@
   padding: 10px;
   left: 20px;
   font-size: 22px;
-  color: #bdbdbd;
+  color: $color-low-contrast;
   transition: ease-in-out 0.3s;
 }
 
@@ -147,11 +146,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include respond(tab-port) {
+  @include respond(tablet-portrait) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include respond(tab-land) {
+  @include respond(tablet-landscape) {
     grid-template-columns: repeat(4, 1fr);
   }
 }

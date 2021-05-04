@@ -17,93 +17,92 @@ body {
   background-color: $color-primary;
   position: relative;
   justify-content: space-between;
+}
+.nav-header {
+  display: inline;
+  line-height: 3rem;
+}
 
-  &-header {
-    display: inline;
-    line-height: 3rem;
-  }
+.nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px;
+}
 
-  &-title {
+.nav-btn {
+  display: none;
+
+  @media (max-width: 600px) {
     display: inline-block;
-    font-size: 22px;
-    color: #fff;
-    padding: 10px;
-  }
-
-  &-btn {
-    display: none;
-
-    @media (max-width: 600px) {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-
-    & label {
-      @media (max-width: 600px) {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
-      }
-
-      & span {
-        @media (max-width: 600px) {
-          display: block;
-          width: 25px;
-          height: 10px;
-          border-top: 2px solid #eee;
-        }
-      }
-    }
-  }
-
-  &-links {
-    display: inline;
-    float: right;
-    font-size: 1.6rem;
-
-    & a {
-      display: inline-block;
-      padding: 13px 10px 13px 10px;
-      text-decoration: none;
-      color: #efefef;
-
-      @media (max-width: 600px) {
-        display: block;
-        width: 100%;
-      }
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-    }
-
-    @media (max-width: 600px) {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: $color-primary;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-    }
-  }
-
-  #nav-check {
-    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
 }
 
-@media (max-width: 600px) {
+label {
+  @media (max-width: 600px) {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+}
 
-  .nav > #nav-check:not(:checked) ~ .nav-links {
+span {
+  @media (max-width: 600px) {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+}
+
+.nav-links {
+  display: inline;
+  float: right;
+  font-size: 1.6rem;
+
+  a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+
+    @media (max-width: 600px) {
+      display: block;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (max-width: 600px) {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: $color-primary;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+}
+
+#nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
-  .nav > #nav-check:checked ~ .nav-links {
+
+  #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }

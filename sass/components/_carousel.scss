@@ -3,27 +3,17 @@
 }
 
 /* Slideshow container */
-.carousel {
-  &-container {
-    height: 32vh;
-    // max-width: 100%;
-    max-width: 1000px;
-    //   position: relative;
-    margin: 2rem auto;
-    //   z-index: -10;
-
-    &-image {
-      width: 100%;
-      max-height: 20rem;
-      object-fit: cover;
-    }
-  }
+.carousel-container {
+  height: 32vh;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
-/* Hide the images by default */
-// .mySlides {
-//   display: none;
-// }
+.carousel-container-image {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+}
 
 /* Next & previous buttons */
 .prev,
@@ -42,10 +32,18 @@
   user-select: none;
 }
 
+.prev::before {
+  content: "\003c";
+}
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+
+  &::before {
+    content: "\003e";
+  }
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -56,7 +54,7 @@
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: $color-high-contrast;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -71,7 +69,7 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: $color-dot-indicator;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -79,7 +77,7 @@
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: $color-dot-indicator-active;
 }
 
 /* Fading animation */
