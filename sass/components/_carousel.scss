@@ -1,107 +1,90 @@
-* {
-  box-sizing: border-box;
+@import "../abstracts/_variables.scss";
+
+/* Carousel */
+.carousel {
+  margin-top: 5rem;
+  width: 80vw;
+  max-width: 128rem;
+  height: 25rem;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin: 6rem auto;
+
+  &:hover .controls {
+    opacity: 1;
+  }
+
+  .controls {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 50;
+    transition: all ease 0.5s;
+  }
+
+  .slides {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    width: 100%;
+    transition: 1s ease-in-out all;
+  }
+
 }
 
-/* Slideshow container */
 .carousel-container {
   height: 32vh;
-  max-width: 1000px;
   margin: 2rem auto;
-}
-
-.carousel-container-image {
-  width: 100%;
-  max-height: 20rem;
+  min-width: 100%;
+  min-height: 25rem;
   object-fit: cover;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: $color-secondary;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.prev::before {
-  content: "\003c";
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-
-  &::before {
-    content: "\003e";
-  }
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
+/* carousel overlay text*/
+.carousel-text {
   color: $color-high-contrast;
-  font-size: 15px;
-  padding: 8px 12px;
+  font-size: $carousel-header-font-size;
+  font-family: Roboto;
+  font-weight: 500;
+  padding: $spacer-3;
   position: absolute;
-  bottom: 8px;
+  bottom: 4.5rem;
   width: 100%;
   text-align: center;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: $color-dot-indicator;
+.control {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
+  transition: ease 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.active,
-.dot:hover {
-  background-color: $color-dot-indicator-active;
+.prev::before {
+  content: "\003c";
+  font-size: 2rem;
 }
 
-/* Fading animation */
-// .fade {
-//   -webkit-animation-name: fade;
-//   -webkit-animation-duration: 1.5s;
-//   animation-name: fade;
-//   animation-duration: 1.5s;
-// }
-
-// @-webkit-keyframes fade {
-//   from {
-//     opacity: 0.4;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes fade {
-//   from {
-//     opacity: 0.4;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
+.next::before {
+  content: "\003e";
+  font-size: 2rem;
+}
