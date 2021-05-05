@@ -1,33 +1,33 @@
 const delay = 5000; //ms
 const slides = document.querySelector(".slides");
 const slidesCount = slides.childElementCount;
-const maxLeft = (slidesCount - 1) * 100 * -1;
+const maxLeftSlide = (slidesCount - 1) * 100 * -1;
 
-let current = 0;
+let currentSlide = 0;
 
 function changeSlide(next = true) {
   if (next) {
-    current += current > maxLeft ? -100 : current * -1;
+    currentSlide += currentSlide > maxLeftSlide ? -100 : currentSlide * -1;
   } else {
-    current = current < 0 ? current + 100 : maxLeft;
+    currentSlide = currentSlide < 0 ? currentSlide + 100 : maxLeftSlide;
   }
 
-  slides.style.left = current + "%";
+  slides.style.left = currentSlide + "%";
 }
 
 let autoChange = setInterval(changeSlide, delay);
-const restart = function() {
+const restart = function () {
   clearInterval(autoChange);
   autoChange = setInterval(changeSlide, delay);
 };
 
 // Controls
-const clickPrev = () => {
-    changeSlide(false);
-    restart();
-}
+document.querySelector(".prev").addEventListener("click", function () {
+  changeSlide(false);
+  restart();
+});
 
-const clickNext = () => {
+document.querySelector(".next").addEventListener("click", function() {
     changeSlide();
     restart();
-}
+})
