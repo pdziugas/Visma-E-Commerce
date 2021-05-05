@@ -5,7 +5,7 @@
   text-align: center;
   font-weight: 100;
   margin-top: 5rem;
-  font-size: 3rem;
+  font-size: $header-font-size;
   opacity: 0.3;
   text-transform: uppercase;
   padding-bottom: 2rem;
@@ -16,15 +16,15 @@
   font-family: Montserrat;
   font-weight: 100;
   margin-top: 100px;
-  font-size: 40px;
+  font-size: $project-title-font-size;
   opacity: 0.3;
   text-transform: uppercase;
 }
 
 .card-container {
-  height: 400px;
-  width: 300px;
-  border-radius: 2px;
+  height: 40rem;
+  width: 30rem;
+  border-radius: 3px;
   position: relative;
   overflow: hidden;
   background: $color-card-background;
@@ -35,13 +35,13 @@
 
 .card-title {
   position: absolute;
-  bottom: 65px;
+  bottom: 6.5rem;
   width: 100%;
   text-align: center;
   color: $color-primary;
   opacity: 0.9;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: $card-title-font-size;
   font-weight: normal;
 }
 
@@ -49,13 +49,13 @@
   position: absolute;
   opacity: 0;
   width: 100%;
-  bottom: 30px;
+  bottom: 3rem;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: $spacer-0;
   color: $color-primary;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: $default-font-size;
   font-weight: 500;
   transition: ease-in-out 0.3s;
 }
@@ -63,9 +63,9 @@
 .btn--add-to-cart:after {
   content: "";
   position: absolute;
-  width: 30px;
+  width: 3rem;
   top: 7px;
-  right: 50px;
+  right: 5rem;
   height: 2px;
   opacity: 0.7;
   border-bottom: 1px solid $color-primary;
@@ -74,9 +74,9 @@
 .btn--add-to-cart:before {
   content: "";
   position: absolute;
-  width: 30px;
+  width: 3rem;
   top: 7px;
-  left: 50px;
+  left: 5rem;
   height: 2px;
   opacity: 0.7;
   border-bottom: 1px solid $color-primary;
@@ -84,11 +84,11 @@
 
 .card-price {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 2rem;
+  right: 2rem;
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
   color: $color-primary;
 }
 
