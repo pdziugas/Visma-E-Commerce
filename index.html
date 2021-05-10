@@ -11,11 +11,28 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
     <link rel="manifest" href="assets/icons/site.webmanifest" />
-    <script src="js/carousel.js" defer></script>
+    <script defer src="js/carousel.js" type="module"></script>
+    <script defer src="js/fetch.js" type="module"></script>
+    <script defer src="js/displayProducts.js" type="module"></script>
+
     <title>Internship task1</title>
   </head>
 
@@ -47,90 +64,15 @@
 
     <!-- CAROUSEL -->
     <div class="carousel">
-      <div class="slides">
-        <figure class="carousel-container">
-          <a href="#1">
-            <img src="https://placeimg.com/1280/720/tech/1" alt="slide image" />
-            <figcaption class="carousel-text">Item One</figcaption>
-          </a>
-        </figure>
-        <figure class="carousel-container">
-          <a href="#2">
-            <img src="https://placeimg.com/1280/720/tech/2" alt="slide image" />
-            <figcaption class="carousel-text">Item Two</figcaption>
-          </a>
-        </figure>
-        <figure class="carousel-container">
-          <a href="#3">
-            <img src="https://placeimg.com/1280/720/tech/3" alt="slide image" />
-            <figcaption class="carousel-text">Item Three</figcaption>
-          </a>
-        </figure>
-      </div>
-      <div class="controls">
-        <div class="control prev"></div>
-        <div class="control next"></div>
-      </div>
+      <div class="slides"></div>
+      <div class="controls"></div>
     </div>
   </header>
+
   <main>
+    <!-- HOMEPAGE ITEMS -->
     <h1 class="menu-title">Menu items</h1>
-
-    <div class="container">
-      <div class="card-container">
-        <h3 class="card-price">$1200</h3>
-        <h2 class="card-title">iPhone Х</h2>
-        <figure class="card-image-container">
-          <img src="https://placeimg.com/480/640/tech/1" alt="" />
-        </figure>
-        <button class="btn btn--add-to-cart" type="button">Add to cart</button>
-      </div>
-
-      <div class="card-container">
-        <h3 class="card-price">$800</h3>
-        <h2 class="card-title">Samsung r8</h2>
-        <figure class="card-image-container">
-          <img src="https://placeimg.com/480/640/tech/2" alt="" />
-        </figure>
-        <button class="btn btn--add-to-cart" type="button">Add to cart</button>
-      </div>
-
-      <div class="card-container">
-        <h3 class="card-price">$750</h3>
-        <h2 class="card-title">HUAWEI 5</h2>
-        <figure class="card-image-container">
-          <img src="https://placeimg.com/480/640/tech/3" alt="" />
-        </figure>
-        <button class="btn btn--add-to-cart" type="button">Add to cart</button>
-      </div>
-
-      <div class="card-container">
-        <h3 class="card-price">$470</h3>
-        <h2 class="card-title">Samsung A2</h2>
-        <figure class="card-image-container">
-          <img src="https://placeimg.com/480/640/tech/4" alt="" />
-        </figure>
-        <button class="btn btn--add-to-cart" type="button">Add to cart</button>
-      </div>
-
-      <div class="card-container">
-        <h3 class="card-price">$520</h3>
-        <h2 class="card-title">iPhone 5s</h2>
-        <figure class="card-image-container">
-          <img src="https://placeimg.com/480/640/tech/5" alt="" />
-        </figure>
-        <button class="btn btn--add-to-cart" type="button">Add to cart</button>
-      </div>
-
-      <div class="card-container">
-        <h3 class="card-price">$680</h3>
-        <h2 class="card-title">Samsung S8+</h2>
-        <figure class="card-image-container">
-          <img src="https://placeimg.com/480/640/tech/6" alt="" />
-        </figure>
-        <button class="btn btn--add-to-cart" type="button">Add to cart</button>
-      </div>
-    </div>
+    <div class="container"></div>
   </main>
 
   <!-- FOOTER -->

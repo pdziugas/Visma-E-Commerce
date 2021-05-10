@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "json:server": "json-server api/db.json --routes api/routes.json",
+    "http:server": "http-server --proxy http://localhost:3000 -c",
+    "dev": "concurrently --kill-others \"npm run compile:sass\" \"npm run json:server\" \"npm run http:server\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,6 @@
   "homepage": "https://github.com/pdziugas/task1#readme",
   "devDependencies": {
     "node-sass": "^5.0.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,0 +1,70 @@
+{
+  "carousel": [
+    {
+      "id": 1,
+      "title": "Phones",
+      "category": "phones",
+      "description": "Look around and shop for phones",
+      "imageUrl": "https://placeimg.com/1280/300/tech/1"
+    },
+    {
+      "id": 2,
+      "title": "Computers",
+      "category": "computers",
+      "description": "Look around and shop for computers.",
+      "imageUrl": "https://placeimg.com/1280/300/tech/2"
+    },
+    {
+      "id": 3,
+      "title": "Accessories",
+      "category": "accessories",
+      "description": "Shop for necessary tech accessories.",
+      "imageUrl": "https://placeimg.com/1280/300/tech/3"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhoneX",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "price": 1200,
+      "imageUrl": "https://placeimg.com/135/180/tech/1"
+    },
+    {
+      "id": 2,
+      "title": "Samsung r8",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "price": 800,
+      "imageUrl": "https://placeimg.com/135/180/tech/2"
+    },
+    {
+      "id": 3,
+      "title": "HUAWEI 5",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "price": 750,
+      "imageUrl": "https://placeimg.com/135/180/tech/3"
+    },
+    {
+      "id": 4,
+      "title": "Samsung A2",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "price": 520,
+      "imageUrl": "https://placeimg.com/135/180/tech/4"
+    },
+    {
+      "id": 5,
+      "title": "iPhone 5s",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "price": 520,
+      "imageUrl": "https://placeimg.com/135/180/tech/5"
+    },
+    {
+      "id": 6,
+      "title": "Samsung S8+",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "price": 680,
+      "imageUrl": "https://placeimg.com/480/640/tech/6"
+    }
+  ]
+}

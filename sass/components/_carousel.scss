@@ -61,6 +61,19 @@
   text-align: center;
 }
 
+.carousel-subtext {
+  color: $color-high-contrast;
+  font-size: $carousel-header-font-size;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 2rem;
+  padding: $spacer-1;
+  position: absolute;
+  bottom: 3.5rem;
+  width: 100%;
+  text-align: center;
+}
+
 .control {
   margin: 0 5px;
   display: flex;
