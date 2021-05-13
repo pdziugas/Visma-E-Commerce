@@ -59,16 +59,16 @@
       "imageUrl": "https://placeimg.com/135/180/tech/5"
     },
     {
-      "id": 6,
-      "title": "Samsung S8+",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "price": 680,
-      "imageUrl": "https://placeimg.com/480/640/tech/6"
+      "title": "test",
+      "description": "test test test",
+      "price": "123.44",
+      "imageUrl": "https://placeimg.com/135/180/tech/6",
+      "id": 6
     },
     {
-      "title": "samsung",
-      "description": "dsajfiojdasoifj",
-      "price": "300",
+      "title": "test 2",
+      "description": "test 2 test 2 test 2",
+      "price": "321",
       "imageUrl": "https://placeimg.com/135/180/tech/7",
       "id": 7
     }

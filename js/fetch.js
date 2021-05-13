@@ -8,4 +8,40 @@ const fetchProductData = () =>
     .then((response) => response.json())
     .catch((error) => console.error(error));
 
-export { fetchCarouselData, fetchProductData };
+const postItemData = (item) =>
+  fetch("/products", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(item),
+  }).catch((error) => console.error(error));
+
+const editItemData = (item, index) =>
+  fetch("/products/" + index, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(item),
+  })
+    .then((response) => response.json())
+    .catch((error) => console.error(error));
+
+const deleteItemData = (index) =>
+  fetch("/products/" + index, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .catch((error) => console.error(error));
+
+export {
+  fetchCarouselData,
+  fetchProductData,
+  postItemData,
+  editItemData,
+  deleteItemData,
+};
