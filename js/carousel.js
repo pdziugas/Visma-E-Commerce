@@ -18,9 +18,7 @@ const displayCarousel = (carouselData) => {
       </a>
     </figure>`).join("");
 
-    slides.innerHTML = `
-      ${carouselItems}
-    `
+    slides.innerHTML += carouselItems
 } 
 
 const displayControls = () => {

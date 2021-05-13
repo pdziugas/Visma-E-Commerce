@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "json:server": "json-server api/db.json --routes api/routes.json",
+    "json:server": "json-server api/db.json",
     "http:server": "http-server --proxy http://localhost:3000 -c",
     "dev": "concurrently --kill-others \"npm run compile:sass\" \"npm run json:server\" \"npm run http:server\""
   },

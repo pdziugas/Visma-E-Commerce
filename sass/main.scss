@@ -2,11 +2,13 @@
 @import "abstracts/variables.scss";
 
 // base
+@import "base/animations.scss";
 @import "base/base.scss";
 
 // components
 @import "components/carousel.scss";
 @import "components/main-menu.scss";
+@import "components/modals.scss";
 
 // layout
 @import "layout/navbar.scss";

@@ -11,27 +11,13 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/icons/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/icons/site.webmanifest" crossorigin="use-credentials">
     <script defer src="js/carousel.js" type="module"></script>
     <script defer src="js/fetch.js" type="module"></script>
-    <script defer src="js/displayProducts.js" type="module"></script>
+    <script defer src="js/products/index.js" type="module"></script>
 
     <title>Internship task1</title>
   </head>
@@ -77,6 +63,76 @@
     <h1 class="menu-title">Menu items</h1>
     <div class="container"></div>
   </main>
+
+  <!-- MODALS -->
+  <div class="modals">
+    <a href="#" id="modal-button" class="button add">Add</a>
+  </div>
+  <div id="addItemModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content slideDown">
+      <div class="modal-header">
+        <span class="close closeAddModal" id="closeModal">&times;</span>
+        <h2>Add item</h2>
+      </div>
+      <div class="modal-body">
+        <form action="" class="modal-form">
+          <div class="form-row">
+            <label for="">Title</label>
+            <input type="text" id="title"></input>
+          </div>
+          <div class="form-row">
+            <label for="">Description</label>
+            <input type="text" id="description">
+          </div>
+          <div class="form-row">
+            <label for="">Price</label>
+            <input type="number" id="price" step=".01">
+          </div>
+          <div class="form-row">
+            <label for="">Image URL</label>
+            <input type="text" id="imageUrl">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" class="button add-product" value="Add">
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="editItemModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content slideDown">
+      <div class="modal-header">
+        <span class="close closeEditModal" id="closeModal">&times;</span>
+        <h2>Edit item</h2>
+      </div>
+      <div class="modal-body">
+        <form action="" class="modal-form">
+          <div class="form-row">
+            <label for="">Title</label>
+            <input type="text" id="editTitle"></input>
+          </div>
+          <div class="form-row">
+            <label for="">Description</label>
+            <input type="text" id="editDescription">
+          </div>
+          <div class="form-row">
+            <label for="">Price</label>
+            <input type="number" id="editPrice">
+          </div>
+          <div class="form-row">
+            <label for="">Image URL</label>
+            <input type="text" id="editImageUrl">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" class="button edit-product" value="Edit">
+      </div>
+      </form>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
